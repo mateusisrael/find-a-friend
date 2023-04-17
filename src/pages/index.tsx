@@ -2,13 +2,23 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import styles from "./Home.module.css";
 import logo_larger from "@/public/logo_larger.svg";
+import lupa from "@/public/lupa.svg";
 import pets from "@/public/pets.svg";
+import Select from "@/components/Select";
+import { useRouter } from "next/router";
+import { SearchButton } from "@/components/SearchButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const router = useRouter();
+
+  const _handleSearch = () => {
+    router.push("/adote?estado=rio");
+  };
+
   return (
     <>
       <Head>
@@ -38,6 +48,20 @@ export default function Home() {
           </div>
           <div className={styles.imagebox}>
             <Image src={pets} alt={"pets"}></Image>
+            <div className={styles.rowCentrelize}>
+              <p>Busque um amigo:</p>
+              <div className={styles.row}>
+                <div style={{ marginRight: "16px" }}>
+                  <Select size={"md"} options={["RJ", "GO", "PB", "PA"]} />
+                </div>
+                <Select
+                  size={"lg"}
+                  backgroundColor={"var(--main-background-color-dark)"}
+                  options={["Rio de Janeiro", "Goiás", "Paraíba", "Paraná"]}
+                />
+              </div>
+              <SearchButton onClick={_handleSearch} />
+            </div>
           </div>
         </div>
       </div>

@@ -37,5 +37,15 @@
 }
 
 .imagebox {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
   margin-top: 70px;
+}
+
+.rowCentrelize {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -1,0 +1,71 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FDECED;
+  color: #fff;
+}
+
+.logoMargin {
+  margin-bottom: 27px;
+}
+
+.sidebar {
+  width: max-content;
+  height: 100%;
+  background-color: var(--main-background-color);
+}
+
+.sidebarHeader:first-child {
+  margin-bottom: 26px;
+}
+
+.sidebarHeader {
+  padding: 81px 0 27px; 
+  background-color: var(--main-background-color-dark);
+  padding: 56px;
+}
+
+.sidebarBody {
+  padding: 35px 56px;
+  
+}
+
+.regionFilters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.margin {
+  margin: 0 12px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sidebarBody:last-child {
+  margin-bottom: 0;
+}
+
+.filterContainer {
+  margin-bottom: 30px;
+}
+
+.filterContainer:first-child {
+  margin-bottom: 12px;
+}
+
+.filterLabel {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 0.75;
+}
+
+.filterText {
+  margin-bottom: 27px;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
