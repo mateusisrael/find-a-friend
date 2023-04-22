@@ -50,7 +50,7 @@ export default function Home() {
             <Image src={pets} alt={"pets"}></Image>
             <div className={styles.rowCentrelize}>
               <p>Busque um amigo:</p>
-              <div className={styles.row}>
+              <div className={`${styles.row} ${styles.width350}`}>
                 <div style={{ marginRight: "16px" }}>
                   <Select size={"md"} options={["RJ", "GO", "PB", "PA"]} />
                 </div>

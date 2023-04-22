@@ -3,6 +3,7 @@
   min-height: 100vh;
   background-color: #FDECED;
   color: #fff;
+  overflow-y: auto;
 }
 
 .logoMargin {
@@ -11,8 +12,12 @@
 
 .sidebar {
   width: max-content;
-  height: 100%;
+  min-height: 100%;
   background-color: var(--main-background-color);
+  overflow-y: auto;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
 }
 
 .sidebarHeader:first-child {
