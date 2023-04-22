@@ -1,9 +1,13 @@
+.container{
+  position: relative;
+}
+
 .md {
   width: fit-content;
 }
 
 .lg {
-  width: 280px;
+  width: auto;
 }
 
 .optionsContainer {
@@ -14,19 +18,12 @@
   border: 1px solid #fff;
   max-height: 165px;
   overflow-y: auto;
-  width: auto;
+  z-index: 1;
+  width: 100%;
 }
 
-.optionsContainerLG {
-  position: absolute;
-  padding: 19px 0;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border: 1px solid #fff;
-  max-height: 165px;
-  overflow-y: auto;
-  width: auto;
-  width: 280px;  
+.optionsContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .option {
@@ -39,7 +36,6 @@
 }
 
 .selection {
-  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -52,20 +48,9 @@
   cursor: pointer;
 }
 
-.selectionOpened {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.2;
-  border-radius: 20px;
-  padding: 19px 14px;
-  border: 1px solid #fff;
+.selectionRemoveBorderBottom {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  cursor: pointer;
 }
 
 .arrow {

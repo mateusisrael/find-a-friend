@@ -22,12 +22,20 @@ const Select: FunctionComponent<SelectProps> = ({
     setOpenOptions(false);
   };
 
+  const _handleMouseOut = () => {
+    setOpenOptions(false);
+  };
+
   return (
-    <div className={styles[size]}>
+    <div
+      onMouseLeave={_handleMouseOut}
+      // onMouseBlur={_handleMouseOut}
+      className={`${styles.container} ${styles[size]}`}
+    >
       <div
         style={{ backgroundColor: backgroundColor }}
-        className={`${
-          isOpenOptions ? styles.selectionOpened : styles.selection
+        className={`${styles.selection} ${
+          isOpenOptions && styles.selectionRemoveBorderBottom
         }`}
         onClick={() => setOpenOptions((state) => !state)}
       >
@@ -40,9 +48,8 @@ const Select: FunctionComponent<SelectProps> = ({
       </div>
       {isOpenOptions ? (
         <div
-          className={
-            size === "md" ? styles.optionsContainer : styles.optionsContainerLG
-          }
+          style={{ backgroundColor: backgroundColor }}
+          className={styles.optionsContainer}
         >
           {options.map((item, i) => {
             return (

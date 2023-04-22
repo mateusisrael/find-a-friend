@@ -41,11 +41,16 @@ export default function SearchList() {
                 <Image src={logo_larger} alt={"logo"}></Image>
               </div>
               <div className={styles.regionFilters}>
-                <Select size={"md"} options={["RJ", "PE"]} />
+                <Select
+                  backgroundColor={"var(--main-background-color-dark)"}
+                  size={"md"}
+                  options={["RJ", "PE"]}
+                />
                 <div className={styles.margin}>
                   <Select
                     size={"lg"}
                     options={["Rio de Janeiro", "Pernambuco"]}
+                    backgroundColor={"var(--main-background-color-dark)"}
                   />
                 </div>
 
@@ -59,7 +64,11 @@ export default function SearchList() {
               {listFilters.map((filter, i) => (
                 <div className={styles.filterContainer} key={i}>
                   <p className={styles.filterLabel}>{filter.label}</p>
-                  <Select size={"lg"} options={filter.options} />
+                  <Select
+                    backgroundColor={"var(--main-background-color)"}
+                    size={"lg"}
+                    options={filter.options}
+                  />
                 </div>
               ))}
             </div>
