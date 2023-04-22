@@ -58,6 +58,7 @@ export default function Home() {
                   size={"lg"}
                   backgroundColor={"var(--main-background-color-dark)"}
                   options={["Rio de Janeiro", "Goiás", "Paraíba", "Paraná"]}
+                  centrelizeSelectText={true}
                 />
               </div>
               <SearchButton onClick={_handleSearch} />

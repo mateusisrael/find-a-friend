@@ -7,9 +7,11 @@ interface SelectProps {
   options: string[];
   size: "md" | "lg";
   backgroundColor?: string;
+  centrelizeSelectText?: boolean;
 }
 
 const Select: FunctionComponent<SelectProps> = ({
+  centrelizeSelectText = false,
   options,
   size,
   backgroundColor,
@@ -35,8 +37,10 @@ const Select: FunctionComponent<SelectProps> = ({
       <div
         style={{ backgroundColor: backgroundColor }}
         className={`${styles.selection} ${
-          isOpenOptions && styles.selectionRemoveBorderBottom
-        }`}
+          isOpenOptions ? styles.selectionRemoveBorderBottom : ""
+        }
+          ${centrelizeSelectText ? styles.alignCenter : ""}
+          `}
         onClick={() => setOpenOptions((state) => !state)}
       >
         {selected}
