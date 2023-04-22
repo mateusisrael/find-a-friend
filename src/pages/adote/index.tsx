@@ -74,7 +74,9 @@ export default function SearchList() {
         </div>
         <div className={styles.list}>
           {Array.from(Array(10).keys()).map((element, i) => (
-            <Card key={i} />
+            <div style={{ margin: "10px" }} key={i}>
+              <Card />
+            </div>
           ))}
         </div>
       </div>
