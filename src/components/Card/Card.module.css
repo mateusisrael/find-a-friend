@@ -10,11 +10,15 @@
   cursor: pointer;
   padding: 5px 0;
   background-color: var(--container-color);
+  color: var(--main-font-color);
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 
 .container:hover {
   --container-color: var(--main-font-color);
   background-color: var(--container-color);
+  color: #fff;
 }
 
 .pictureContainer {
