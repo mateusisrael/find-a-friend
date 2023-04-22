@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { listFilters } from "./_data";
 import { SearchButton } from "@/components/SearchButton";
+import { Card } from "@/components/Card";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -71,7 +72,11 @@ export default function SearchList() {
             ))}
           </div>
         </div>
-        <div className={styles.list}></div>
+        <div className={styles.list}>
+          {Array.from(Array(10).keys()).map((element, i) => (
+            <Card key={i} />
+          ))}
+        </div>
       </div>
     </>
   );

@@ -1,0 +1,42 @@
+.container {
+  --container-color: #fff;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  width: 280px;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 5px 0;
+  background-color: var(--container-color);
+}
+
+.container:hover {
+  --container-color: var(--main-font-color);
+  background-color: var(--container-color);
+}
+
+.pictureContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.animalSpecie {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 5px;
+  border: 4px var(--container-color) solid;
+  bottom: 20px;
+  border-radius: 50%;
+}
+
+.name {
+  position: relative;
+  bottom: 15px;
+}
