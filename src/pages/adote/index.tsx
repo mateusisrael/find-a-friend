@@ -20,62 +20,59 @@ export default function SearchList() {
   const { estado, uf } = router.query;
 
   return (
-    console.log(router),
-    (
-      <>
-        <Head>
-          <title>Find A Friend | Adote</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/logo_small_orange.svg" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
-        <div className={styles.background}>
-          <div className={styles.sidebar}>
-            <div className={styles.sidebarHeader}>
-              <div className={styles.logoMargin}>
-                <Image src={logo_larger} alt={"logo"}></Image>
-              </div>
-              <div className={styles.regionFilters}>
-                <Select
-                  backgroundColor={"var(--main-background-color-dark)"}
-                  size={"md"}
-                  options={["RJ", "PE"]}
-                />
-                <div className={styles.margin}>
-                  <Select
-                    size={"lg"}
-                    options={["Rio de Janeiro", "Pernambuco"]}
-                    backgroundColor={"var(--main-background-color-dark)"}
-                  />
-                </div>
-
-                <SearchButton onClick={() => {}} />
-              </div>
+    <>
+      <Head>
+        <title>Find A Friend | Adote</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/logo_small_orange.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <div className={styles.background}>
+        <div className={styles.sidebar}>
+          <div className={styles.sidebarHeader}>
+            <div className={styles.logoMargin}>
+              <Image src={logo_larger} alt={"logo"}></Image>
             </div>
+            <div className={styles.regionFilters}>
+              <Select
+                backgroundColor={"var(--main-background-color-dark)"}
+                size={"md"}
+                options={["RJ", "PE"]}
+              />
+              <div className={styles.margin}>
+                <Select
+                  size={"lg"}
+                  options={["Rio de Janeiro", "Pernambuco"]}
+                  backgroundColor={"var(--main-background-color-dark)"}
+                />
+              </div>
 
-            <div className={styles.sidebarBody}>
-              <p className={styles.filterText}>Filtros</p>
-
-              {listFilters.map((filter, i) => (
-                <div className={styles.filterContainer} key={i}>
-                  <p className={styles.filterLabel}>{filter.label}</p>
-                  <Select
-                    backgroundColor={"var(--main-background-color)"}
-                    size={"lg"}
-                    options={filter.options}
-                  />
-                </div>
-              ))}
+              <SearchButton onClick={() => {}} />
             </div>
           </div>
-          <div className={styles.list}></div>
+
+          <div className={styles.sidebarBody}>
+            <p className={styles.filterText}>Filtros</p>
+
+            {listFilters.map((filter, i) => (
+              <div className={styles.filterContainer} key={i}>
+                <p className={styles.filterLabel}>{filter.label}</p>
+                <Select
+                  backgroundColor={"var(--main-background-color)"}
+                  size={"lg"}
+                  options={filter.options}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </>
-    )
+        <div className={styles.list}></div>
+      </div>
+    </>
   );
 }
