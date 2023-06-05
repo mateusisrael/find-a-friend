@@ -10,7 +10,7 @@ import Select from "@/components/Select";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { listFilters } from "./_data";
+import { listFilters } from "../../mock/filterMock";
 import { SearchButton } from "@/components/SearchButton";
 import { Card } from "@/components/Card";
 import { pets as petsData } from "@/mock/petsMock";

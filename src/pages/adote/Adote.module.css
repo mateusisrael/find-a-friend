@@ -34,7 +34,7 @@
 
 .sidebarBody {
   padding: 35px 56px;
-  
+  overflow-y: auto;
 }
 
 .regionFilters {
