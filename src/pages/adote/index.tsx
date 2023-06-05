@@ -13,6 +13,7 @@ import { useEffect } from "react";
 import { listFilters } from "./_data";
 import { SearchButton } from "@/components/SearchButton";
 import { Card } from "@/components/Card";
+import { pets as petsData } from "@/mock/petsMock";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -73,11 +74,13 @@ export default function SearchList() {
           </div>
         </div>
         <div className={styles.list}>
-          {Array.from(Array(20).keys()).map((element, i) => (
-            <div style={{ margin: "10px" }} key={i}>
-              <Card />
-            </div>
-          ))}
+          {petsData.map((pet, i) => {
+            return (
+              <div style={{ margin: "10px" }} key={i}>
+                <Card pet={pet} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </>

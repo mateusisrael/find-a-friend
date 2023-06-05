@@ -13,10 +13,14 @@ interface Adress {
   phone: number
 }
 
-export interface Pet {
-  name: string,
+export interface IPetResume {
+  name: string;
+  mainPicture: string;
+  specie: "cat" | "dog";
+}
+
+export interface Pet extends IPetResume {
   bio: string,
-  mainPicture: string,
   pictures: string[],
   enviroment: "Hambiente amplo" | "Hambiente pequeno",
   energy: Energy,
